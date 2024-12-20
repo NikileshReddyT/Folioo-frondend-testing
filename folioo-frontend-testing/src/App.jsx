@@ -23,7 +23,9 @@ const DynamicPage = () => {
       .get(`https://folioo-test-server.onrender.com/user/${firstSegment}`)
       .then((res) => {
         console.log(res);
-        setData(res.data);
+        if(!res.data.message){
+          setData(res.data);
+        }
       })
       .catch((e) => {
         console.error(e);
