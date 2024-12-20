@@ -14,9 +14,6 @@ const DynamicPage = () => {
   const pathname = window.location.hostname;
   const firstSegment = pathname.split(".")[0];
 
-
-
-
   // console.log(window.location);
 
   useEffect(() => {
@@ -33,12 +30,12 @@ const DynamicPage = () => {
       });
   }, [firstSegment]);
 
-
   if (!data) {
     return <h1>No Data</h1>;
   }
-
-
+  if (pathname.split(".")[0] === "folioo") {
+    return <h1>Welcome To the Home Page</h1>;
+  }
 
   return (
     <>
