@@ -55,7 +55,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<h1>Home</h1>} />
-          <Route path='*' element={<DynamicPage />} />
+          <Route path='/*' element={<DynamicPage />} />
         </Routes>
       </BrowserRouter>
     </div>
