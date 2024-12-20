@@ -23,7 +23,7 @@ const DynamicPage = () => {
     // console.log(firstSegment);
     // console.log(pathname);
     axios
-      .get(`http://10.123.16.177:4000/user/${firstSegment}`)
+      .get(`https://folioo-test-server.onrender.com/user/${firstSegment}`)
       .then((res) => {
         console.log(res);
         setData(res.data);
